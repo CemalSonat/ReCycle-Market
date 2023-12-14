@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReCycle Market</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css"> 
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Firebase JavaScript SDK -->
+    <script defer type="module" src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script defer type="module" src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
+
+    <!-- Your Firebase configuration script -->
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+      <!-- Nav -->
+      <div class="nav container">
+        <a href="#" class="logo">ReCycle Market</a>
+        <!-- Cart-Icon -->
+        <i class='bx bx-shopping-bag' id="cart-icon" ></i>
+        <!-- Cart -->
+        <div class="cart">
+            <h2 class="cart-title">Your Cart</h2>
+            <!-- Content -->
+            <div class="cart-content">
+            
+            </div>
+            <!-- Total -->
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">0₺</div>
+            </div>
+            <!-- Buy Button -->
+            <button type="button" class="btn-buy">Buy Now</button>
+            <!-- Cart Close -->
+            <i class='bx bx-x' id="close-cart"></i>
+        </div>
+      </div>
+    </header>
+     <!-- Shop -->
+     <section class="shop container">
+        <h2 class="section title">Shop Products</h2>
+        <!-- Content -->
+        <div class="shop-content">
+         <!-- Button to trigger the pop-up modal -->
+         <button id="addProductBtn" class="btn-add-prod">Add Product</button>
+
+         <!-- Pop-up modal for adding new products -->
+         <div id="addProductModal" class="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <!-- Form elements for product details -->
+            <label for="productName">Product Name:</label>
+            <input type="text" id="productName">
+            <label for="productDescription">Product Description:</label>
+            <input type="text" id="productDescription">
+            <label for="productPrice">Product Price:</label>
+            <input type="text" id="productPrice">
+            <button onclick="addProduct()" class="btn-add-prod">Add Product</button>
+            </div>
+        </div>
+            <!-- Box 1 -->
+            <div class="product-box">
+                <img src="img/product1.jpg" alt="" class="product-img">
+                <h2 class="product-title">Shirt</h2>
+                <span class="price">150₺</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+              <!-- Box 2 -->
+              <div class="product-box">
+                <img src="img/product2.jpg" alt="" class="product-img">
+                <h2 class="product-title">Earbuds</h2>
+                <span class="price">1000₺</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+              <!-- Box 3 -->
+              <div class="product-box">
+                <img src="img/product3.jpg" alt="" class="product-img">
+                <h2 class="product-title">Parka</h2>
+                <span class="price">1200₺</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+              <!-- Box 4 -->
+              <div class="product-box">
+                <img src="img/product4.jpg" alt="" class="product-img">
+                <h2 class="product-title">Water Bottle</h2>
+                <span class="price">500₺</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+              <!-- Box 5 -->
+              <div class="product-box">
+                <img src="img/product5.jpg" alt="" class="product-img">
+                <h2 class="product-title">Sunglasses</h2>
+                <span class="price">2000₺</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+        </div>
+     </section>
+</body>
+</html>
